@@ -87,7 +87,10 @@ input {
   padding: 20px 15px;
   caret-color: $blue;
   color: #111;
-  font-weight: 600;
+  font: {
+    weight: 600;
+    size: 17px;
+  }
   border: {
     width: 1px;
     style: solid;
