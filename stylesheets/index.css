@@ -83,10 +83,13 @@ input {
   display: block;
   width: 100%;
   padding: 20px 15px;
+  caret-color: #6055a5;
+  color: #111;
+  font-weight: 600;
   border-width: 1px;
   border-style: solid;
   border-color: #dedede;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 
 input::-webkit-input-placeholder {
@@ -107,6 +110,11 @@ input::-ms-input-placeholder {
 input::placeholder {
   color: #6f6e72;
   font-weight: 600;
+}
+
+input:focus {
+  outline: none;
+  border-color: #6055a5;
 }
 
 input[type="submit"] {
@@ -139,13 +147,8 @@ input[type="submit"] {
     display: grid;
     place-content: center;
     min-height: 100vh;
-    font-family: "Poppins", sans-serif;
-    font-size: 16px;
     background-image: url("../images/bg-intro-desktop.png");
-    background-color: #ff7a7a;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
   }
   main {
     display: -webkit-box;
@@ -163,7 +166,6 @@ input[type="submit"] {
     display: -ms-grid;
     display: grid;
     place-content: center;
-    color: white;
     text-align: left;
     margin-bottom: 0px;
   }
@@ -180,94 +182,23 @@ input[type="submit"] {
         flex-basis: 48%;
   }
   button {
-    width: 100%;
-    padding: 15px 20%;
-    font-size: 17px;
-    color: #b9b6d3;
-    border: none;
-    border-radius: 7.5px;
-    background-color: #6055a5;
-    line-height: 1.4;
-    -webkit-box-shadow: 0 7.5px 10px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 7.5px 10px rgba(0, 0, 0, 0.3);
-    margin-bottom: 25px;
-  }
-  button span {
-    font-weight: 700;
-    color: white;
+    cursor: pointer;
   }
   form {
     padding: 40px;
-    background-color: white;
-    border-radius: 7.5px;
-    -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-            box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
   }
   label {
-    width: 100%;
     margin-bottom: 25px;
-    position: relative;
-    display: block;
-  }
-  label p {
-    color: #ff7a7a;
-    font-size: 12px;
-    font-style: italic;
-    display: none;
-    text-align: right;
-    margin-top: 5px;
-  }
-  label img {
-    position: absolute;
-    top: 17px;
-    right: 20px;
-    display: none;
-  }
-  input {
-    display: block;
-    width: 100%;
-    padding: 20px 15px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #dedede;
-    border-radius: 3px;
-  }
-  input::-webkit-input-placeholder {
-    color: #6f6e72;
-    font-weight: 600;
-  }
-  input:-ms-input-placeholder {
-    color: #6f6e72;
-    font-weight: 600;
-  }
-  input::-ms-input-placeholder {
-    color: #6f6e72;
-    font-weight: 600;
-  }
-  input::placeholder {
-    color: #6f6e72;
-    font-weight: 600;
   }
   input[type="submit"] {
-    color: white;
-    font-weight: 500;
-    background-color: #38cc8c;
     margin-bottom: 20px;
-    border: none;
-    -webkit-box-shadow: 0 5px 0px #34bd81;
-            box-shadow: 0 5px 0px #34bd81;
     padding: 20px 0 12.5px;
   }
-  .tc {
-    width: 85%;
-    margin: auto;
-    text-align: center;
-    color: #b8b7be;
-    font-size: 10px;
-    font-weight: 700;
-  }
-  .tc span {
-    color: #ff7a7a;
+  input[type="submit"]:hover {
+    cursor: pointer;
+    background-color: #77e2b4;
+    -webkit-box-shadow: 0 5px 0px #6dcca3;
+            box-shadow: 0 5px 0px #6dcca3;
   }
 }
 /*# sourceMappingURL=index.css.map */

@@ -84,15 +84,22 @@ input {
   display: block;
   width: 100%;
   padding: 20px 15px;
+  caret-color: $blue;
+  color: #111;
+  font-weight: 600;
   border: {
     width: 1px;
     style: solid;
     color: #dedede;
-    radius: 3px;
+    radius: 5px;
   }
   &::placeholder {
     color: #6f6e72;
     font-weight: 600;
+  }
+  &:focus {
+    outline: none;
+    border-color: $blue;
   }
 }
 
