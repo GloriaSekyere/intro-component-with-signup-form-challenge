@@ -1,36 +1,46 @@
-@import "variables";
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
 body {
+  display: grid; // added
+  place-content: center; // added
+  min-height: 100vh; // added
   font: {
     family: "Poppins", sans-serif;
     size: 16px;
   }
   background: {
-    image: url("../images/bg-intro-mobile.png");
+    image: url("../images/bg-intro-desktop.png"); //modified
     color: $red;
+    size: cover; //added
     repeat: no-repeat;
     attachment: fixed;
   };
 }
 
 main {
-  width: 85%;
-  margin: 50px auto;
+  display: flex; // added
+  justify-content: space-between; // added
+  width: 82.5%; // modified
+  margin: 0 auto; // modified
 }
 
 .intro {
+  flex-basis: 45%; // added
+  display: grid; // added
+  place-content: center; // added 
   color: $white;
-  text-align: center;
-  margin-bottom: 40px;
+  text-align: left; // modified
+  margin-bottom: 0px; // modified
   &__title {
-    padding: 15px;
+    font-size: 45px; // added 
+    padding: 0 0 30px; // modified
+    line-height: 1.1; // added
   }
+  &__body { // added
+    line-height: 1.6;
+  }
+}
+
+.btn_form { // added
+  flex-basis: 48%;
 }
 
 button {
@@ -51,7 +61,7 @@ button {
 }
 
 form {
-  padding: 25px;
+  padding: 40px; // modified
   background-color: $white;
   border-radius: 7.5px;
   box-shadow: 0 10px 10px rgba(0,0,0,0.2);
@@ -59,7 +69,7 @@ form {
 
 label {
   width: 100%;
-  margin-bottom: 15px;
+  margin-bottom: 25px; // modified
   position: relative;
   display: block;
   p {
@@ -100,10 +110,10 @@ input[type="submit"] {
   color: $white;
   font-weight: 500;
   background-color: $green;
-  margin-bottom: 10px;
+  margin-bottom: 20px; // modified
   border: none;
   box-shadow: 0 5px 0px rgb(52, 189, 129);
-  padding: 17.5px 0 12.5px;
+  padding: 20px 0 12.5px; // modified
 }
 
 .tc {
@@ -118,8 +128,4 @@ input[type="submit"] {
   span {
     color: $red;
   }
-}
-
-@media screen and (min-width: 1280px) {
- @import "desktop";
 }
