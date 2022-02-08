@@ -1,18 +1,16 @@
 "use strict";
-// Declare variables
-const form = document.querySelector("form");
-const labels = document.querySelectorAll("label");
-const inputs = document.querySelectorAll("input");
+const form = document.querySelector("form"); // get form element
 form.addEventListener("submit", (e) => {
-    // For each label element, perform the following instructions
+    const labels = document.querySelectorAll("label"); // get all label elements
+    // for each label element, perform the following instructions
     labels.forEach(label => {
-        // Grab input, error icon, and error text from label's nodelist
+        // grab input, error icon, and error text from label's nodelist
         const input = label.childNodes[1];
         const warning = label.childNodes[3];
         const error = label.childNodes[5];
         // If the input field is empty
         if (input.value === "") {
-            e.preventDefault(); // Prevent form from submitting
+            e.preventDefault();
             warning.style.display = "block"; // display error text
             error.style.display = "block"; // display error icon
         }
@@ -22,4 +20,12 @@ form.addEventListener("submit", (e) => {
             error.style.display = "none"; // remove error icon
         }
     });
+    /*
+    // email validation
+    const email = document.querySelectorAll("input")[2]; // get email input element
+    const pattern: RegExp = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+    if (!email.value.match(pattern)) {
+      e.preventDefault();
+      console.log("error")
+    }*/
 });
