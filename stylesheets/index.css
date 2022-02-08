@@ -120,12 +120,14 @@ input:focus {
 
 input[type="submit"] {
   color: white;
+  height: 50px;
   font-weight: 500;
   background-color: #38cc8c;
   margin-bottom: 10px;
   border: none;
   -webkit-box-shadow: 0 5px 0px #34bd81;
           box-shadow: 0 5px 0px #34bd81;
+  padding: 0;
 }
 
 .tc {
