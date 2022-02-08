@@ -63,8 +63,9 @@ label {
   display: block;
 }
 
-label p {
+label span {
   color: #ff7a7a;
+  display: block;
   font-size: 12px;
   font-style: italic;
   display: none;

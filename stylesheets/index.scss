@@ -62,8 +62,9 @@ label {
   margin-bottom: 15px;
   position: relative;
   display: block;
-  p {
+  span {
     color: $red;
+    display: block;
     font: {
       size: 12px;
       style: italic;
