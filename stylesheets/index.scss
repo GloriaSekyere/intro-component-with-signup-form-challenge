@@ -106,13 +106,12 @@ input {
 
 input[type="submit"] {
   color: $white;
-  height: 50px;
   font-weight: 500;
   background-color: $green;
   margin-bottom: 10px;
   border: none;
   box-shadow: 0 5px 0px rgb(52, 189, 129);
-  padding: 0;
+  padding: 17.5px 0 12.5px;
 }
 
 .tc {
