@@ -50,6 +50,7 @@ label {
 input[type="submit"] {
   margin-bottom: 20px; // modified
   padding: 20px 0 12.5px; // modified
+  -webkit-appearance: none;
   &:hover { // added
     cursor: pointer;
     background-color: #77e2b4;

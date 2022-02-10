@@ -127,6 +127,7 @@ input[type="submit"] {
   -webkit-box-shadow: 0 5px 0px #34bd81;
           box-shadow: 0 5px 0px #34bd81;
   padding: 17.5px 0 12.5px;
+  -webkit-appearance: none;
 }
 
 .tc {
@@ -194,6 +195,7 @@ input[type="submit"] {
   input[type="submit"] {
     margin-bottom: 20px;
     padding: 20px 0 12.5px;
+    -webkit-appearance: none;
   }
   input[type="submit"]:hover {
     cursor: pointer;
