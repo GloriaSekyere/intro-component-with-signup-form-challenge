@@ -9,9 +9,9 @@ form.addEventListener("submit", (e: Event) => {
   labels.forEach(label => {
 
     // grab input, error icon, and error text from label's nodelist
-    const input = label.childNodes[1] as HTMLInputElement;
-    const warning = label.childNodes[3] as HTMLParagraphElement;
-    const error = label.childNodes[5] as HTMLImageElement;
+    const input = label.children[0] as HTMLInputElement;
+    const warning = label.children[1] as HTMLParagraphElement;
+    const error = label.children[2] as HTMLImageElement;
     
     // If the input field is empty
     if (input.value === "") {
@@ -33,9 +33,9 @@ form.addEventListener("submit", (e: Event) => {
   });
 
   // Email format validation
-  const emailInput = labels[2].childNodes[1] as HTMLInputElement; // get email input element
-  const emailWarning = labels[2].childNodes[3] as HTMLParagraphElement; // get email error text
-  const emailError = labels[2].childNodes[5] as HTMLImageElement; // get email error icon
+  const emailInput = labels[2].children[0] as HTMLInputElement; // get email input element
+  const emailWarning = labels[2].children[1] as HTMLParagraphElement; // get email error text
+  const emailError = labels[2].children[2] as HTMLImageElement; // get email error icon
   const pattern: RegExp = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; // define regex for email validation
   
   // If email format does not match pattern, show error styles

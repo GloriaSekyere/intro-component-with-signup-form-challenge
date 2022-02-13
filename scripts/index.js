@@ -6,9 +6,9 @@ form.addEventListener("submit", (e) => {
     // for each label element, perform the following instructions
     labels.forEach(label => {
         // grab input, error icon, and error text from label's nodelist
-        const input = label.childNodes[1];
-        const warning = label.childNodes[3];
-        const error = label.childNodes[5];
+        const input = label.children[0];
+        const warning = label.children[1];
+        const error = label.children[2];
         // If the input field is empty
         if (input.value === "") {
             e.preventDefault(); // prevent form from submitting
@@ -28,9 +28,9 @@ form.addEventListener("submit", (e) => {
         }
     });
     // Email format validation
-    const emailInput = labels[2].childNodes[1]; // get email input element
-    const emailWarning = labels[2].childNodes[3]; // get email error text
-    const emailError = labels[2].childNodes[5]; // get email error icon
+    const emailInput = labels[2].children[0]; // get email input element
+    const emailWarning = labels[2].children[1]; // get email error text
+    const emailError = labels[2].children[2]; // get email error icon
     const pattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/; // define regex for email validation
     // If email format does not match pattern, show error styles
     if (!emailInput.value.match(pattern)) {
